@@ -6,7 +6,7 @@ public class MachineLogic
     private readonly SlotRoller slotRoller = new();
     public static readonly List<int> firstRowSymbols = new();
     public static readonly List<List<string>> columnsOfSymbols = new();
-    public static readonly List<string[]> result = new();
+    public static List<string[]> result = new();
     public static int lastWinAmount;
     public static int totalWinnings;
 
@@ -98,7 +98,7 @@ public class MachineLogic
                     ways *= symbolsInThisColumn;
                 }
 
-                result.Add(new[] { symbol, ways.ToString() });
+                result.Add(new[] { symbol, ways.ToString(), matchInColumns.ToString()  });
 
             }
         }
@@ -111,10 +111,13 @@ public class MachineLogic
         {
             string symbol = win[0];
             int ways = int.Parse(win[1]);
+            int matchingColumns = int.Parse(win[2]);
 
             if (WinningChart.payTable.ContainsKey(symbol))
             {
-                int multiplier = WinningChart.payTable[symbol][0];
+                int index = matchingColumns - 3;
+                int multiplier = WinningChart.payTable[symbol][index];
+
                 int winningForThisSymbol = ways * multiplier;
                 lastWinAmount = winningForThisSymbol;
                 totalWinnings += winningForThisSymbol;

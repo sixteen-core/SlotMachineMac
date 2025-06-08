@@ -11,21 +11,19 @@ namespace slotMachineMac
         private readonly MachineScreen machineScreen = new();
         private readonly MachineLogic machineLogic = new();
         
-        public void Spin()
+        public bool Spin()
         {
-
           Console.WriteLine("machine spinning!");
-
           machineLogic.GetFirstRowSymbols();
           machineLogic.GatherPositionsAnArrangeColumnsOfSymbols();
           machineLogic.CalculateSlotWays();
           machineLogic.CalculateWinnings();
-
           machineScreen.PrintFirstRowSymbols();
           machineScreen.PrintColumnSymbols();
           machineScreen.PrintColumnWayResults();
           machineScreen.PrintTotalMoneyAmount();
-
+          return true;
         }
+
     }
 }
