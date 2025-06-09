@@ -1,0 +1,2 @@
+# SlotMachineMac
+This is a software written by me based solving a test that challenge you to construct a Slot Machine, this app is based on a C# console app and a test in the same solution, In short this must find all the ways that each symbol finds in the rollers, then it finds how much it pays per way and per range of rollers.

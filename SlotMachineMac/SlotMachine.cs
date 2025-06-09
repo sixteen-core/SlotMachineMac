@@ -1,3 +1,4 @@
+// COPYRIGHTS DANIEL GUEVARA - MONTREAL 2025
 using System;
 using System.Collections.Generic;
 using System.Threading;

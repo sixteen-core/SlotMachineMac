@@ -1,4 +1,5 @@
-﻿using System;
+﻿// COPYRIGHTS DANIEL GUEVARA - MONTREAL 2025
+using System;
 
 namespace slotMachineMac
 {
