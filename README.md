@@ -1,4 +1,5 @@
 # SlotMachineMac
-Slot machine is a software that works with the console, it ask you to select an option for example SPIN, so it spin the rollers, In short this must find all the ways that each symbol finds in the rollers, then it finds how much it pays per way and per range of rollers.
 
-It's interesting because each spin gives you a random value on each roller, so based on it you get the result of the ways... try it yourserlf, also it comes with tests because was done with TDD
+I built this library to simulate a slot machine in the console. You select actions like SPIN, and it calculates all possible combinations on the rollers, determines payouts per combination, and returns the results.
+
+Each spin generates random values on the rollers, so every play produces different outcomes. It was developed with TDD and includes tests to ensure correctness.
